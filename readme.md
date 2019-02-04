@@ -1,86 +1,69 @@
-## Тестовое задание
-Если Вы не знакомы с Laravel, то можете выполнить задачу на удобном для вас фреймворке.
-Требуется сделать форк текущего репозитария, выполнить задание и прислать нам ссылку на ваш форк. 
-Либо, если вы желаете использовать другой фреймворк (не Ларавел), то выполнить задание, залить код на гитхаб и прислать нам ссылку.
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-## Настройка проекта
-Для Laravel:
-- `composer install`
-- настроить `.env` файл
-- `php artisan key:generate`
-- `php artisan migrate`
-- `php artisan db:seed`
+## About Laravel
 
-Для других фреймворков: 
-- использовать дамп БД `dump.sql`
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-## Дополнительная информация
-Статусты заказа:
-- 0 новый
-- 10 подтвержден
-- 20 завершен
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Для верстки использовать bootstrap `/public/js/app.js`, `/public/css/app.css`
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
-Свой js код писать в файл `/public/js/script.js` 
+## Learning Laravel
 
-Свои css стили писать в файл `/public/css/style.css` 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
 
-## Техническое задание
+If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-#### Обязательно
-- Создать страницу на которой выводится текущая температура в Брянске (запрос из php) (Работа с api какого-либо сервиса например: https://tech.yandex.ru/weather/)
+## Laravel Sponsors
 
-- Создать страницу со списоком заказов в табличном виде
-    - поля 
-        - ид_заказа 
-        - название_партнера 
-        - стоимость_заказа 
-        - наименование_состав_заказа 
-        - статус_заказа
-    - ид_заказа - ссылка на редактирование заказа в новой вкладке
-- Создать страницу редактирования заказа
-    - поля для редактирования:
-        - email_клиента(редактирование, обязательное)
-        - партнер(редактирование, обязательное)
-        - продукты(вывод наименования + количества единиц продукта)
-        - статус заказа(редактирование, обязательное)
-        - стоимость заказ(вывод)
-        - сохранение изменений в заказе
+We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
 
-#### Не обязательно (если желаете лучше продемонстрировать свои умения)
-- Создать страницу со списком продуктов в табличном виде:
-    - поля 
-        - ид_продукта 
-        - наименование_продукта 
-        - наименование_поставщика 
-        - цена
-    - сортировка по алфавиту по возрастанию
-    - пагинация по 25 элементов
-    - редактирование цены каждого продукта с помощью ajax запроса
-- Дополнительный функционал для страницы списка заказов
-    - список заказов разбить на вкладки(bootstrap)
-        - владка просроченные
-            - дата доставки раньше текущего момента
-            - статус заказа 10
-            - сортировка по дате доставки по убыванию
-            - ограничение 50 штук
-        - текущие
-            - дата доставки 24 часа с текущего момента
-            - статус заказа 10
-            - сортировка по дате доставки по возрастанию
-        - новые
-            - дата доставки после текущего момента
-            - статус заказа 0
-            - сортировка по дате доставки по возрастанию
-            - ограничение 50
-        - выполненные
-            - дата доставки в текущие сутки
-            - статус заказа 20
-            - сортировка по дате доставки по убыванию
-            - ограничение 50
-- Дополнительный функционал для страницы редактирования заказа
-    - при установке статуса заказа "завершен" требуется отправить email - партнеру и всем поставщикам продуктов из заказа
-        - заказ №(номер) завершен
-        - текст состав заказа (список), стоимость заказа (значение)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- [UserInsights](https://userinsights.com)
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
+- [iMi digital](https://www.imi-digital.de/)
+- [Earthlink](https://www.earthlink.ro/)
+- [Steadfast Collective](https://steadfastcollective.com/)
+- [We Are The Robots Inc.](https://watr.mx/)
+- [Understand.io](https://www.understand.io/)
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
